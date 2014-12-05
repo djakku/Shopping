@@ -1,0 +1,17 @@
+
+%h1 Shopping Malls
+
+%table#malls
+  %thead
+    %tr
+      %th Mall Id
+      %th Mall Name
+      %th Mall Location
+      %th More Info
+  %tbody
+    - @malls.each do |stk|
+      %tr
+        %td= stk.mallid
+        %td= stk.mallname
+        %td= stk.malllocation
+        %td= link_to "More about #{stk.mallname}", malls_path(stk)
